@@ -12,4 +12,5 @@ Route::get('/about', function () {
 });
 
 Route::get('/reviews', [GameReviewController::class, 'index'])->name('reviews.index');
+Route::post('/reviews', [GameReviewController::class, 'store'])->name('reviews.store');
 // route::view('/', 'home'); //no additional funtions setup

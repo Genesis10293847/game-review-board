@@ -16,6 +16,26 @@
                     Reviews
                 </a>
             </div>
+        <div class="flex items-center gap-4">
+            @auth
+            <span class="text-sm text-gray-600">
+                signed in as {{ auth()->user()->name }}
+            </span>
+            <form method="POST" action="{{route('logout')}}">
+                @csrf
+                <button type="submit" class="text-sm text-gray-600 hover:underline">
+                    Log out
+                </button>
+            </form>
+            @else
+            {{-- <a href="{{route('login')}}" class="text-sm text-gray-600 hover:underline">
+                Log in
+            </a>
+            <a href="{{route('register')}}" class="text-sm text-gray-600 hover:underline">
+                Register
+            </a> --}}
+            @endauth
+        </div>
         </nav>
         <main class = "max-w-2x1 mx-auto py-8 px-4"><!-- main.max-w-2x1.mx-auto.py-8.px-4 -->
             {{  $slot  }}
