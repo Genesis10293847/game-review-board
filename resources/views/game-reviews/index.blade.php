@@ -37,7 +37,9 @@
             <input type="number" id="rating" name="rating" value="{{ old('rating') }}" class="mt-1 block w-24 rounded-md border-gray-300 shadow-sm">
         </div>
 
-        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"></button>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+            Submit Review
+        </button>
 
     </form>
     <div class="space-y-4">
